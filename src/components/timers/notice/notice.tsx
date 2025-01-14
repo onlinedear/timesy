@@ -3,8 +3,7 @@ import styles from './notice.module.css';
 export function Notice() {
   return (
     <p className={styles.notice}>
-      Please do not close this tab while timers are running, otherwise all
-      timers will be stopped.
+      计时器运行时请不要关闭此选项卡，否则所有计时器都将停止。
     </p>
   );
 }
