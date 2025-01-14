@@ -16,9 +16,9 @@ export function ReloadModal() {
 
   return (
     <Modal show={needRefresh} onClose={close}>
-      <h2 className={styles.title}>New Content</h2>
+      <h2 className={styles.title}>新内容</h2>
       <p className={styles.desc}>
-        New content available, click on reload button to update.
+        有新内容可用，请单击重新加载按钮进行更新。
       </p>
 
       <div className={styles.buttons}>
@@ -28,7 +28,7 @@ export function ReloadModal() {
           className={styles.primary}
           onClick={() => updateServiceWorker(true)}
         >
-          Reload
+          重新加载
         </button>
       </div>
     </Modal>
