@@ -63,14 +63,14 @@ export function Timer({ id, index }: TimerProps) {
   const handleReset = () => {
     if (spent === 0) return;
 
-    if (isRunning) return showSnackbar('Please first stop the timer.');
+    if (isRunning) return showSnackbar('请先停止计时器');
 
     setIsRunning(false);
     reset(id);
   };
 
   const handleDelete = () => {
-    if (isRunning) return showSnackbar('Please first stop the timer.');
+    if (isRunning) return showSnackbar('请先停止计时器');
 
     deleteTimer(id);
   };
@@ -190,7 +190,7 @@ export function Timer({ id, index }: TimerProps) {
         <div className={styles.control}>
           <input
             className={cn(styles.input, left === 0 && styles.finished)}
-            placeholder="Untitled"
+            placeholder="无标题"
             type="text"
             value={name}
             onChange={e => rename(id, e.target.value)}
@@ -231,7 +231,7 @@ export function Timer({ id, index }: TimerProps) {
           <span className={styles.key}>Shift</span>
           <span className={styles.text}>+</span>
           <span className={styles.key}>{index + 1}</span>
-          <span className={styles.text}>to toggle play.</span>
+          <span className={styles.text}>暂停</span>
         </div>
       )}
     </div>
