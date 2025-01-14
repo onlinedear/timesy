@@ -46,7 +46,7 @@ export function Form() {
     <>
       <form className={styles.form} onSubmit={handleSubmit}>
         <Field
-          label="Timer Name"
+          label="计时器名称"
           optional
           type="text"
           value={name}
@@ -55,7 +55,7 @@ export function Form() {
 
         <div className={styles.timeFields}>
           <Field
-            label="Hours"
+            label="小时"
             type="select"
             value={hours}
             onChange={value => setHours(value as number)}
@@ -70,7 +70,7 @@ export function Form() {
           </Field>
 
           <Field
-            label="Minutes"
+            label="分钟"
             type="select"
             value={minutes}
             onChange={value => setMinutes(value as number)}
@@ -85,7 +85,7 @@ export function Form() {
           </Field>
 
           <Field
-            label="Seconds"
+            label="秒"
             type="select"
             value={seconds}
             onChange={value => setSeconds(value as number)}
@@ -107,7 +107,7 @@ export function Form() {
               type="checkbox"
               onChange={() => setAutoStart(prev => !prev)}
             />
-            Auto start the timer.
+            自动启动计时器
           </label>
         </div>
 
@@ -123,10 +123,10 @@ export function Form() {
 
       <Modal show={showSettings} onClose={() => setShowSettings(false)}>
         <div className={styles.settings}>
-          <h2>Settings</h2>
+          <h2>设置</h2>
 
           <div className={styles.field}>
-            <label htmlFor="volume">Volume</label>
+            <label htmlFor="volume">音量</label>
             <input
               max={1}
               min={0}
@@ -138,8 +138,7 @@ export function Form() {
           </div>
 
           <div className={styles.notice}>
-            <strong>Notice:</strong> Changes to these settings will affect all
-            timers and are saved automatically.
+            <strong>注意:</strong> 对这些设置的更改将影响所有计时器，并会自动保存。
           </div>
         </div>
       </Modal>
