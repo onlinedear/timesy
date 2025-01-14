@@ -113,7 +113,7 @@ export function Form() {
 
         <div className={styles.buttons}>
           <button className={styles.primary} type="submit">
-            Add Timer
+            添加计时器
           </button>
           <button type="button" onClick={() => setShowSettings(true)}>
             <IoMdSettings />
